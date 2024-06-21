@@ -26,7 +26,7 @@ function Left() {
     );
   }, [products]);
 
-  function handleDecrement(index) {
+  function decrement(index) {
     let copyCart = [...products];
 
     if (copyCart[index]["quantity"] > 0) {
@@ -35,7 +35,7 @@ function Left() {
     setProducts(copyCart);
   }
 
-  function handleIncrement(index) {
+  function increment(index) {
     let copyCart = [...products];
     copyCart[index]["quantity"] += 1;
     setProducts(copyCart);
@@ -53,10 +53,9 @@ function Left() {
               image={data.src}
               name={data.name}
               price={data.price}
-              id={data.id}
               quantity={data.quantity}
-              handleDecrement={handleDecrement}
-              handleIncrement={handleIncrement}
+              increment={increment}
+              decrement={decrement}
               index={idx}
             />
           );

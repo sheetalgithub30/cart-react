@@ -2,10 +2,9 @@ function Product({
   image,
   name,
   price,
-  id,
   quantity,
-  handleIncrement,
-  handleDecrement,
+  increment,
+  decrement,
   index,
 }) {
   return (
@@ -21,14 +20,17 @@ function Product({
         </div>
 
         <div id="buttons">
-          <button id="sub" onClick={() => handleDecrement(index)}>
+          <button id="sub" 
+          onClick={() =>{
+           decrement(index);
+           }}>
             <i class="fa-solid fa-circle-minus"></i>
           </button>
           <span>{quantity}</span>
           <button
             id="add"
             onClick={() => {
-              handleIncrement(index);
+              increment(index);
             }}
           >
             <i class="fa-solid fa-circle-plus"></i>

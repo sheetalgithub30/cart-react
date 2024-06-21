@@ -23,7 +23,7 @@ function Right() {
             </div>
           </div>
         ) : (
-          <div id="error">!!! Card is Empty !!!</div>
+          <div id="error">Card is Empty !!</div>
         )}
       </div>
     </>
